@@ -1,4 +1,5 @@
-#pragma once
+#ifndef _RESIDUAL_H
+#define _RESIDUAL_H
 
 #include "./Mesh.h"
 #include "./ImagePyramid.h"
@@ -1194,3 +1195,5 @@ public:
   }
 
 };
+
+#endif

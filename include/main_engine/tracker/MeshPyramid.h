@@ -1,4 +1,5 @@
-#pragma once
+#ifndef _MESHPYRAMID_H
+#define _MESHPYRAMID_H
 
 #include "./MeshData.h"
 #include "./MeshIO.h"
@@ -263,3 +264,5 @@ void MeshPyramid<FloatType>::updatePyramid(string meshPath,
 }
 
 typedef MeshPyramid<CoordinateType> PangaeaMeshPyramid;
+
+#endif

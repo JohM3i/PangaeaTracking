@@ -4,7 +4,7 @@
 #include "../utils/global.h"
 #include "../tracker/Mesh.h"
 
-#include "./CCamera.h"
+#include "CCamera.h"
 
 #include <limits>
 

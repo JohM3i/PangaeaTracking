@@ -1,4 +1,5 @@
-#pragma once
+#ifndef _RESIDUAL_UTIL_H
+#define _RESIDUAL_UTIL_H
 
 #include "./Mesh.h"
 
@@ -42,3 +43,5 @@ private:
 };
 
 void KnownCorrespondencesICP(PangaeaMeshData& templateMesh, PangaeaMeshData& currentMesh, double pose[6]);
+
+#endif

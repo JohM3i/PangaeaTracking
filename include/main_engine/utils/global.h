@@ -33,9 +33,10 @@
 #ifdef Success
 #undef Success
 #endif
-#include <Eigen/Core>
-#include <Eigen/Geometry>
-#include <Eigen/OpenGLSupport>
+
+#include <eigen3/Eigen/Core>
+#include <eigen3/Eigen/Geometry>
+#include <eigen3/unsupported/Eigen/OpenGLSupport>
 
 using namespace std;
 using namespace Eigen;

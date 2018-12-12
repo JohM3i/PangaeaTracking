@@ -1,4 +1,4 @@
-#files
+cmake-build*
 
 GPATH
 GRTAGS
@@ -18,11 +18,15 @@ GTAGS
 tmp.*
 */generate_scores.o*
 pangaea
+*.swp
 
 
 #folder
 /build_*
+build/*
+data/*
 /old_stuff
+.idea/
 
 # MSVC files
 *.opensdf

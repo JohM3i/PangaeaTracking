@@ -1,4 +1,5 @@
-#pragma once
+#ifndef _MESHDATA_H
+#define _MESHDATA_H
 
 #include "../utils/global.h"
 
@@ -374,3 +375,4 @@ struct TrackerOutputInfo
   int nRenderLevel;
 
 };
+#endif

@@ -1,4 +1,5 @@
-#pragma once
+#ifndef _FEATUREPYRAMID_H
+#define _FEATUREPYRAMID_H
 
 #include "FeatureReader.h"
 #include "ImagePyramid.h"
@@ -57,3 +58,5 @@ private:
   FeatureReader* pFeatureReader;
 
 };
+
+#endif

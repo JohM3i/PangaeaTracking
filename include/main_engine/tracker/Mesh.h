@@ -1,8 +1,9 @@
-#pragma once
+#ifndef _MESH_H
+#define _MESH_H
 
-#include "./MeshData.h"
-#include "./MeshIO.h"
-#include "./MeshPyramid.h"
+#include "MeshData.h"
+#include "MeshIO.h"
+#include "MeshPyramid.h"
 
 // get Mesh Bounding Box
 template<class FloatType>
@@ -435,3 +436,5 @@ void UpdateFeatureDiff(TrackerOutputInfo& outputInfo, vector<bool>& visibilityMa
 
 void UpdateFeatureDiffGT(TrackerOutputInfo& outputInfo, vector<bool>& visibilityMask,
                       FeatureImageType& featureImage);
+
+#endif

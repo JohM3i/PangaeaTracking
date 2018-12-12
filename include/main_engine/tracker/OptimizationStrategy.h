@@ -1,7 +1,7 @@
 //
 // OptimizationStrategy file
-
-#pragma once
+#ifndef _OPTIMIZATIONSTRATEGY_H
+#define _OPTIMIZATIONSTRATEGY_H
 
 #include "../utils/global.h"
 #include "../utils/settings.h"
@@ -110,3 +110,5 @@ public:
         vector<int>& updatedLevels);
 
 };
+
+#endif

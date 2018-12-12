@@ -1,4 +1,5 @@
-#pragma once
+#ifndef _MESHIO_H
+#define _MESHIO_H
 
 #include "./MeshData.h"
 #include "../third_party/ply.h"
@@ -19,7 +20,7 @@ public:
   static void updateFromFile(const std::string& filename, MeshData<FloatType>& meshData,
                              bool clockwise = true);
 
-  static void writeToFile(const std::string& filename, const MeshData<FloatType>& meshData, bool saveASCII);
+  static void writeToFile(const std::string& filename, const MeshData<FloatType>& meshData, bool saveASCII = false);
 
   // create mesh from grid aligned 3d points
   static void createMeshFromDepth(MeshData<FloatType>& meshData,
@@ -68,8 +69,8 @@ private:
 	/* Write Functions													    */
 	/************************************************************************/
 
-	static void writeToPLY(const std::string& filename, const MeshData<FloatType>& meshData, bool saveASCII);
-  static void writeToWithFeaturePLY(const std::string& filename, const MeshData<FloatType>& meshData, bool saveASCII);
+	static void writeToPLY(const std::string& filename, const MeshData<FloatType>& meshData, bool saveASCII = false);
+  static void writeToWithFeaturePLY(const std::string& filename, const MeshData<FloatType>& meshData, bool saveASCII = false);
 
 	static void writeToOFF(const std::string& filename, const MeshData<FloatType>& meshData) {};
 
@@ -791,7 +792,7 @@ void MeshIO<FloatType>::updateFromOBJ(const std::string& filename,
 }
 
 template<class FloatType>
-void MeshIO<FloatType>::writeToFile(const std::string& filename, const MeshData<FloatType>& meshData, bool saveASCII = false)
+void MeshIO<FloatType>::writeToFile(const std::string& filename, const MeshData<FloatType>& meshData, bool saveASCII)
 {
   bfs::path filePath(filename.c_str());
 
@@ -867,7 +868,7 @@ void MeshIO<FloatType>::writeToOBJ(const std::string& filename,
 }
 
 template<class FloatType>
-void MeshIO<FloatType>::writeToPLY(const std::string& filename, const MeshData<FloatType>& meshData, bool saveASCII = false)
+void MeshIO<FloatType>::writeToPLY(const std::string& filename, const MeshData<FloatType>& meshData, bool saveASCII)
 {
 	PlyFile *ply;
 	float version;
@@ -939,7 +940,7 @@ void MeshIO<FloatType>::writeToPLY(const std::string& filename, const MeshData<F
 }
 
 template<class FloatType>
-void MeshIO<FloatType>::writeToWithFeaturePLY(const std::string& filename, const MeshData<FloatType>& meshData, bool saveASCII = false)
+void MeshIO<FloatType>::writeToWithFeaturePLY(const std::string& filename, const MeshData<FloatType>& meshData, bool saveASCII)
 {
 	PlyFile *ply;
 	float version;
@@ -1472,3 +1473,5 @@ void MeshIO<FloatType>::skipLine(char * buf, int size, FILE * fp)
 }
 
 typedef MeshIO<CoordinateType> PangaeaMeshIO;
+
+#endif

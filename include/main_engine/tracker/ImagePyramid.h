@@ -1,4 +1,5 @@
-#pragma once
+#ifndef _IMAGEPYRAMID_H
+#define _IMAGEPYRAMID_H
 
 #include "../utils/global.h"
 
@@ -92,3 +93,5 @@ private:
   IntensityImageType grayImageBYTE;
 
 };
+
+#endif
