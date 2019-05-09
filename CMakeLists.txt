@@ -116,6 +116,8 @@ target_link_libraries(main_engine ${CERES_LIBRARIES})
 add_executable(PangaeaTracking_console src/console_app/PangaeaTracking_console.cpp)
 target_link_libraries(PangaeaTracking_console main_engine)
 
+
+
 add_executable(PangaeaTracking
         src/gui_app/BasicGLPane.cpp
         src/gui_app/CameraControl.cpp
@@ -126,3 +128,4 @@ add_executable(PangaeaTracking
         src/gui_app/PangaeaTracking.cpp
         )
 target_link_libraries(PangaeaTracking main_engine)
+target_link_libraries(PangaeaTracking ${wxWidgets_LIBRARIES})
